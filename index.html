@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" ">
     <title>AGG</title>
+    <link type="image/x-icon" href="./assets/img/logo.svg" rel="shortcut icon">
+    <link type="Image/x-icon" href="./assets/img/logo.svg" rel="icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/hamburger.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -16,19 +20,33 @@
             <div class="container">
                 <div class="toolbar__Body">
                     <div class="logo"><img src="./assets/img/logo.svg" alt=""></div>
-                    <ul class="toolbar__Menu">
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Услуги</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                    <div class="toolbar__Group">
-                        <div class="toolbar__Phone">+7 7018 884 454</div>
-                        <div class="toolbar__whatsappIcon"><img src="./assets/img/whatsapp__Logo.svg" alt=""></div>
-                        <div class="toolbar__instagramIcon"><img src="./assets/img/instagram__Logo.svg" alt=""></div>
+                    <div class="toolbar__MainGroup">
+                        <ul class="toolbar__Menu">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                        <div class="toolbar__Group">
+                            <div class="toolbar__Phone">+7 7018 884 454</div>
+                            <div class="toolbar__Media">
+                                <div class="toolbar__whatsappIcon"><img src="./assets/img/whatsapp__Logo.svg" alt="">
+                                </div>
+                                <div class="toolbar__instagramIcon"><img src="./assets/img/instagram__Logo.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <button class="hamburger hamburger--collapse" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    <div class="menu-bg" id="menu-bg"></div>
                 </div>
             </div>
         </nav>
+
+
         <header class="header">
             <div class="container">
 
@@ -55,39 +73,176 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="header__Body">
-                                <h1 class="header__Title">Консолидированные Автоперевозки</h1>
-                                <div class="header__Flex">
-                                    <div class="header__Img"><img src="./assets/img/header__Img.png" alt=""></div>
-                                    <div class="header__Text">Международная транспортно-логистическая компания ОсОО
-                                        «Asia Cargo
-                                        Group» является отечественной компанией в сфере логистики Казахстана.
-                                        ОсОО «Asia Cargo Group» отечественная компания Казахской Республики, являющаяся
-                                        таможенным
-                                        перевозчиком внесенным в общий реестр таможенных перевозчиков ЕАЭС.
-                                        На дальних грузоперевозках работают водители, трудовой стаж которых составляет
-                                        не менее
-                                        15-20 лет.</div>
+                            <div class="swiper">
+
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Акмолинская область</div>
+                                            <div class="header__City">Акколь</div>
+                                            <div class="header__City">Атбассар</div>
+                                            <div class="header__City">Кокшетау</div>
+                                            <div class="header__City">Степногорск</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Алматинская область</div>
+                                            <div class="header__City">Алматы</div>
+                                            <div class="header__City">Капшагай</div>
+                                            <div class="header__City">Каскелен</div>
+                                            <div class="header__City">Талгар</div>
+                                            <div class="header__City">Талдыкорган</div>
+                                            <div class="header__City">Жаркент</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Атырауская область</div>
+                                            <div class="header__City">Атырау</div>
+                                            <div class="header__City">Кулсары</div>
+                                            <div class="header__City">Гурьев</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Восточно-Казахстанская
+                                                область</div>
+                                            <div class="header__City">Аягоз</div>
+                                            <div class="header__City">Зайсан</div>
+                                            <div class="header__City">Серебрянск</div>
+                                            <div class="header__City">Усть-Каменогорск</div>
+                                            <div class="header__City">Зыряновск</div>
+                                            <div class="header__City">Семей</div>
+                                            <div class="header__City">Семипалатинск</div>
+                                            <div class="header__City">Курчатов</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Актюбинская область</div>
+                                            <div class="header__City">Актобе</div>
+                                            <div class="header__City">Хромтау</div>
+                                            <div class="header__City">Актюбинкс</div>
+                                            <div class="header__City">Шалкар</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Актюбинская область</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Западно-Казахстанская
+                                                область</div>
+                                            <div class="header__City">Аксай</div>
+                                            <div class="header__City">Уральск</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Жамбыльская область</div>
+                                            <div class="header__City">Жанатас</div>
+                                            <div class="header__City">Каратау</div>
+                                            <div class="header__City">Тараз</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Карагандинская область
+                                            </div>
+                                            <div class="header__City">Караганда</div>
+                                            <div class="header__City">Жезказган</div>
+                                            <div class="header__City">Сатпаев</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Костанайская область</div>
+                                            <div class="header__City">Костанай</div>
+                                            <div class="header__City">Рудный</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h2 class="header__Subtitle">Ж/Д перевозки, Авиаперевозки По Казахстану и СНГ</h2>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="header__Body">
-                                <h1 class="header__Title">Консолидированные Автоперевозки</h1>
-                                <div class="header__Flex">
-                                    <div class="header__Img"><img src="./assets/img/header__Img.png" alt=""></div>
-                                    <div class="header__Text">Международная транспортно-логистическая компания ОсОО
-                                        «Asia Cargo
-                                        Group» является отечественной компанией в сфере логистики Казахстана.
-                                        ОсОО «Asia Cargo Group» отечественная компания Казахской Республики, являющаяся
-                                        таможенным
-                                        перевозчиком внесенным в общий реестр таможенных перевозчиков ЕАЭС.
-                                        На дальних грузоперевозках работают водители, трудовой стаж которых составляет
-                                        не менее
-                                        15-20 лет.</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="header__Body">
+                            <div class="header__Grid">
+
+
+                                <div class="header__Item">
+                                    <div class="header__City City__Title">Акмолинская область</div>
+                                    <div class="header__City">Акколь</div>
+                                    <div class="header__City">Атбассар</div>
+                                    <div class="header__City">Кокшетау</div>
+                                    <div class="header__City">Степногорск</div>
                                 </div>
-                                <h2 class="header__Subtitle">Ж/Д перевозки, Авиаперевозки По Казахстану и СНГ</h2>
+                                <div class="header__Item">
+                                    <div class="header__City City__Title">Алматинская область</div>
+                                    <div class="header__City">Алматы</div>
+                                    <div class="header__City">Капшагай</div>
+                                    <div class="header__City">Каскелен</div>
+                                    <div class="header__City">Талгар</div>
+                                    <div class="header__City">Талдыкорган</div>
+                                    <div class="header__City">Жаркент</div>
+                                </div>
+                                <div class="header__Item">
+                                    <div class="header__City City__Title">Атырауская область</div>
+                                    <div class="header__City">Атырау</div>
+                                    <div class="header__City">Кулсары</div>
+                                    <div class="header__City">Гурьев</div>
+                                </div>
+                                <div class="header__Item">
+                                    <div class="header__City City__Title">Восточно-Казахстанская область</div>
+                                    <div class="header__City">Аягоз</div>
+                                    <div class="header__City">Зайсан</div>
+                                    <div class="header__City">Серебрянск</div>
+                                    <div class="header__City">Усть-Каменогорск</div>
+                                    <div class="header__City">Зыряновск</div>
+                                    <div class="header__City">Семей</div>
+                                    <div class="header__City">Семипалатинск</div>
+                                    <div class="header__City">Курчатов</div>
+                                </div>
+                                <div class="header__Item">
+                                    <div class="header__City City__Title">Актюбинская область</div>
+                                    <div class="header__City">Актобе</div>
+                                    <div class="header__City">Хромтау</div>
+                                    <div class="header__City">Актюбинкс</div>
+                                    <div class="header__City">Шалкар</div>
+                                </div>
+                                <div class="header__Item">
+                                    <div class="header__City City__Title">Актюбинская область</div>
+                                </div>
+                                <div class="header__Item">
+                                    <div class="header__City City__Title">Западно-Казахстанская область</div>
+                                    <div class="header__City">Аксай</div>
+                                    <div class="header__City">Уральск</div>
+                                </div>
+                                <div class="header__Item">
+                                    <div class="header__City City__Title">Жамбыльская область</div>
+                                    <div class="header__City">Жанатас</div>
+                                    <div class="header__City">Каратау</div>
+                                    <div class="header__City">Тараз</div>
+                                </div>
+                                <div class="header__Item">
+                                    <div class="header__City City__Title">Карагандинская область</div>
+                                    <div class="header__City">Караганда</div>
+                                    <div class="header__City">Жезказган</div>
+                                    <div class="header__City">Сатпаев</div>
+                                </div>
+                                <div class="header__Item">
+                                    <div class="header__City City__Title">Костанайская область</div>
+                                    <div class="header__City">Костанай</div>
+                                    <div class="header__City">Рудный</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -105,35 +260,61 @@
                         <div class="calculator__Block_Calc">
                             <div class="calculator__Group">
                                 <label for="amount">Количество мест</label>
-                                <input id="amount" type="text">
+                                <input class="amount" name="amount" id="amount" type="text"
+                                    oninput="this.value=this.value.replace(/[^0-9]/g,'',);">
                             </div>
                             <div class="calculator__Group">
                                 <label for="weight">Вес</label>
-                                <input id="weight" type="text">
+                                <input class="weight" name="weight" type="text"
+                                    oninput="this.value=this.value.replace(/[^0-9]/g,'',);">
                             </div>
                             <div class="calculator__Group">
-                                <label for="ot_where">От куда</label>
+                                <label class="ot_where" for="ot_where">От куда</label>
 
-                                <select id="ot_where">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="vw">VW</option>
-                                    <option value="audi" selected>Audi</option>
+                                <select name="ot_where" id="ot_where">
+                                    <option value="Астана" selected>Астана</option>
+                                    <option value="Кокшетау">Кокшетау</option>
+                                    <option value="Караганды">Караганды</option>
+                                    <option value="Павлодар">Павлодар</option>
+                                    <option value="Петропавловск">Петропавловск</option>
+                                    <option value="Жезказган">Жезказган</option>
+                                    <option value="Семей">Семей</option>
+                                    <option value="Оскемен">Оскемен</option>
+                                    <option value="Актау">Актау</option>
+                                    <option value="Атырау">Атырау</option>
+                                    <option value="Актобе">Актобе</option>
+                                    <option value="Уральск">Уральск</option>
+                                    <option value="Шымкент">Шымкент</option>
+                                    <option value="Тараз">Тараз</option>
+                                    <option value="Кызылорда">Кызылорда</option>
+                                    <option value="Талдыкорган">Талдыкорган</option>
                                 </select>
                             </div>
                             <div class="calculator__Group">
                                 <label for="where">Куда</label>
 
-                                <select id="where">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="vw">VW</option>
-                                    <option value="audi" selected>Audi</option>
+                                <select class="where" name="where" id="where">
+                                    <option value="Астана" selected>Астана</option>
+                                    <option value="Кокшетау">Кокшетау</option>
+                                    <option value="Караганды">Караганды</option>
+                                    <option value="Павлодар">Павлодар</option>
+                                    <option value="Петропавловск">Петропавловск</option>
+                                    <option value="Жезказган">Жезказган</option>
+                                    <option value="Семей">Семей</option>
+                                    <option value="Оскемен">Оскемен</option>
+                                    <option value="Актау">Актау</option>
+                                    <option value="Атырау">Атырау</option>
+                                    <option value="Актобе">Актобе</option>
+                                    <option value="Уральск">Уральск</option>
+                                    <option value="Шымкент">Шымкент</option>
+                                    <option value="Тараз">Тараз</option>
+                                    <option value="Кызылорда">Кызылорда</option>
+                                    <option value="Талдыкорган">Талдыкорган</option>
                                 </select>
                             </div>
                         </div>
                         <div class="calculator__total">
-                            <div class="calculator__totalNumber">ЦЕНА: <span>3200 тенге</span></div>
+                            <div class="calculator__totalNumber">ЦЕНА: <span>0 тенге</span></div>
                             <button type="submit" class="calculator__totalBtn">Рассчитать</button>
                         </div>
                     </div>
@@ -144,195 +325,197 @@
             <div class="container">
                 <div class="rate__Body">
                     <div class="rate__Title">Тарифы перевозок</div>
-                    <table>
-                        <tr>
-                            <th>Город</th>
-                            <td>До 5 кг</td>
-                            <td>До 10 кг</td>
-                            <td>До 30 кг</td>
-                            <td>До 50 кг</td>
-                            <td>До 100 кг</td>
-                            <td>До 500 кг</td>
-                            <td>Свыше 500 кг</td>
-                            <td>Срок доставик</td>
-                        </tr>
-                        <tr>
-                            <th>Астана</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Кокшетау</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Караганды</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Павлодар</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Петропавловск</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Жезказган</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Семей</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Оскемен</td>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Актау</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Атырау</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Актобе</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Уральск</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Шымкент</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Тараз</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Кызылорда</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                        <tr>
-                            <th>Талдыкорган</th>
-                            <td>2000</td>
-                            <td>3240</td>
-                            <td>5400</td>
-                            <td>170</td>
-                            <td>150</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>3-4</td>
-                        </tr>
-                    </table>
+                    <div class="table__Div">
+                        <table class="rtable rtable--flip">
+                            <tr>
+                                <th>Город</th>
+                                <td>До 5 кг</td>
+                                <td>До 10 кг</td>
+                                <td>До 30 кг</td>
+                                <td>До 50 кг</td>
+                                <td>До 100 кг</td>
+                                <td>До 500 кг</td>
+                                <td>Свыше 500 кг</td>
+                                <td>Срок доставик</td>
+                            </tr>
+                            <tr>
+                                <th>Астана</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Кокшетау</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Караганды</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Павлодар</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Петропавловск</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Жезказган</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Семей</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Оскемен</td>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Актау</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Атырау</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Актобе</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Уральск</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Шымкент</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Тараз</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Кызылорда</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                            <tr>
+                                <th>Талдыкорган</th>
+                                <td>2000</td>
+                                <td>3240</td>
+                                <td>5400</td>
+                                <td>170</td>
+                                <td>150</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>3-4</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -363,7 +546,8 @@
                 </div>
             </div>
         </div>
-        <div class="aboutUs">
+
+        <!-- <div class="aboutUs">
             <div class="container">
                 <div class="aboutUs__Block">
                     <div class="aboutUs__Img"><img src="./assets/img/airplane.png" alt=""></div>
@@ -440,7 +624,8 @@
                     <div class="aboutUs__Img2"><img src="./assets/img/special_vehicle.png" alt=""></div>
                 </div>
             </div>
-        </div>
+        </div>-->
+
         <div class="feedback">
             <div class="feedback__title">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
             <div class="feedback__Form">
@@ -453,7 +638,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer__Body">
-                    <div class="logo"><img src="./assets/img/logo.svg" alt=""></div>
+                    <div class="logo logoFooter"><img src="./assets/img/logo.svg" alt=""></div>
                     <div class="footer__Block">
                         <div class="footer__Block__text">КОНТАКТЫ:</div>
                         <div class="footer__Block__text">г. Актобе, ул. Г.Жубанова, 96</div>

@@ -19,6 +19,14 @@ body {
 
 .toolbar {}
 
+.hamburger {
+    display: none;
+}
+
+.menu-bg {
+    display: none;
+}
+
 .container {
     max-width: 1330px;
     margin: 0 auto;
@@ -36,10 +44,15 @@ body {
     cursor: pointer;
 }
 
+.toolbar__MainGroup {
+    display: contents;
+}
+
 .toolbar__Menu {
     display: flex;
     align-items: center;
     column-gap: 50px;
+    padding-left: 0;
 }
 
 .toolbar__Menu li {
@@ -53,6 +66,10 @@ body {
     line-height: 24px;
     color: #0B264B;
     text-decoration: none;
+}
+
+.toolbar__Media {
+    display: contents;
 }
 
 .toolbar__Group {
@@ -69,11 +86,12 @@ body {
     margin-right: 20px;
 }
 
-/* .toolbar__whatsappIcon {}
-
-.toolbar__instagramIcon {} */
-
-
+.toolbar__whatsappIcon,
+.toolbar__instagramIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .swiper {
     width: 100%;
@@ -102,8 +120,48 @@ body {
     padding: 50px 0;
 }
 
-.header__Body {}
+.header__Body {
+    /* background-image: url(../assets/img/main__Bg.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat; */
+}
 
+.header__Grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 15px;
+    justify-content: center;
+}
+
+.header__Item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    justify-self: center;
+    text-align: center;
+
+}
+
+.header__City {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    
+}
+
+.City__Title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.swiper2 {
+    width: 50%;
+    height: 50%;
+}
 .header__Title {
     font-style: normal;
     font-weight: 700;
@@ -240,6 +298,12 @@ body {
     color: #FFFFFF;
     border: none;
     cursor: pointer;
+    transition: .4s;
+}
+
+.calculator__totalBtn:active {
+    transform: scale(80%);
+
 }
 
 .calculator__Group input,
@@ -251,7 +315,9 @@ body {
     padding: 0 15px;
 }
 
-
+input {
+    outline: none;
+}
 
 table,
 th,
@@ -281,14 +347,9 @@ th {
     font-size: 32px;
     line-height: 39px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.rate__Body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
 
 .loadingPoint {
     padding: 80px 0 30px 0;
@@ -305,6 +366,7 @@ th {
     flex-direction: column;
     align-items: flex-start;
     row-gap: 15px;
+    width: 49%;
 }
 
 .loadingPoint__Title {
@@ -315,8 +377,8 @@ th {
 }
 
 .loadingPoint__Map {
-    width: 628px;
-    max-width: 628px;
+    width: 100%;
+    max-width: 100%;
     height: 420px;
 }
 
@@ -457,8 +519,6 @@ th {
     background: #0B264B;
 }
 
-.container {}
-
 .footer__Body {
     display: flex;
     align-items: center;
@@ -479,5 +539,444 @@ th {
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
-    
+}
+
+
+
+@media screen and (max-width: 1115px) {
+    .toolbar__Menu li a {
+        font-size: 18px;
+    }
+
+    .toolbar__Phone {
+        font-size: 18px;
+    }
+
+    .toolbar__instagramIcon img,
+    .toolbar__whatsappIcon img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .logo img {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 988px) {
+    .hamburger {
+        display: block;
+        z-index: 10;
+    }
+
+    .toolbar__MainGroup {
+        position: fixed;
+        top: 10%;
+        right: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 30px;
+        row-gap: 10px;
+        z-index: 4;
+        overflow: hidden;
+        transition: 0.4s;
+        transform: translate(100%, -20%);
+    }
+
+    .toolbar__MainGroup.is-active {
+        opacity: 1;
+        transform: translate(0%, 0%);
+
+    }
+
+    .toolbar__Menu {
+        margin-bottom: 0;
+        row-gap: 10px;
+    }
+
+    .menu-bg {
+        display: block;
+        z-index: 2;
+        width: 0;
+        height: 0;
+        background: radial-gradient(circle, #DC052D, #DC052D);
+        border-radius: 50%;
+        transition: 0.3s ease;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .change-bg {
+        width: 600px;
+        height: 480px;
+        transform: translate(60%, -30%);
+    }
+
+    body.is-active {
+        overflow: hidden;
+    }
+
+    .toolbar__Menu {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .toolbar__Group {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .toolbar__Media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 30px;
+        margin-top: 10px;
+    }
+
+    .toolbar__Phone {
+        margin-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 1140px) {
+    .header__Img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+        padding: 10px 0 50px 0;
+    }
+
+    .header__Img {
+        max-width: 450px;
+    }
+
+    .header__Text {
+        font-size: 17px;
+        max-width: 520px;
+        text-align: center;
+    }
+
+    .header__Subtitle {
+        font-size: 37px;
+        max-width: 75vw;
+    }
+}
+
+@media screen and (max-width: 918px) {
+    .header__Flex {
+        flex-direction: column;
+    }
+
+    .header__Text {
+        max-width: 80vw;
+    }
+
+    .header__Subtitle {
+        font-size: 29px;
+        max-width: 75vw;
+        line-height: 130%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .header__Img {
+        max-width: 70vw;
+        margin-bottom: 10px;
+    }
+
+    .header__Title {
+        font-size: 27px;
+    }
+
+    .toolbar__Body {
+        padding: 30px 0 0px 0;
+    }
+
+    .header__Text {
+        max-width: 90vw;
+        font-size: 14px;
+    }
+
+    .header__Subtitle {
+        font-size: 19px;
+        max-width: 100vw;
+        line-height: 130%;
+    }
+
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .calculator__Body {
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    .calculator__Text {
+        font-size: 33px;
+        line-height: 137.9%;
+        max-width: 80vw;
+        text-align: center;
+    }
+
+    .calculator__Block {
+        width: 60vw;
+    }
+
+    .calculator__Block_Calc {
+        padding: 35px 45px;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .calculator__Text {
+        font-size: 24px;
+        line-height: 130%;
+        max-width: 90vw;
+        text-align: center;
+    }
+
+    .calculator__Block {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 473px) {
+    .calculator__Text {
+        font-size: 18px;
+    }
+
+    .calculator__Block {
+        width: 95vw;
+        padding: 25px 15px;
+    }
+
+    .calculator__totalBtn {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .calculator__totalNumber {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .calculator__total {
+        justify-content: space-around;
+    }
+
+}
+
+@media screen and (max-width: 998px) {
+
+
+    .rtable {
+        /*!
+        // IE needs inline-block to position scrolling shadows otherwise use:
+        // display: block;
+        // max-width: min-content;
+        */
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100%;
+
+        overflow-x: auto;
+
+        /* // optional - looks better for small cell values */
+        white-space: nowrap;
+
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .rtable,
+    .rtable--flip tbody {
+        /* // optional - enable iOS momentum scrolling */
+        -webkit-overflow-scrolling: touch;
+
+        /* // scrolling shadows */
+        background: radial-gradient(left, ellipse, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0) 75%) 0 center,
+            radial-gradient(right, ellipse, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
+        background-size: 10px 100%, 10px 100%;
+        background-attachment: scroll, scroll;
+        background-repeat: no-repeat;
+    }
+
+    /* // change these gradients from white to your background colour if it differs */
+    /* // gradient on the first cells to hide the left shadow */
+    .rtable td:first-child,
+    .rtable--flip tbody tr:first-child {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+        background-repeat: no-repeat;
+        background-size: 20px 100%;
+    }
+
+    /* // gradient on the last cells to hide the right shadow */
+    .rtable td:last-child,
+    .rtable--flip tbody tr:last-child {
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        background-size: 20px 100%;
+    }
+
+    .rtable th {
+        font-size: 11px;
+        text-align: left;
+        text-transform: uppercase;
+        background: #f2f0e6;
+    }
+
+    .rtable th,
+    .rtable td {
+        padding: 6px 12px;
+        border: 1px solid #d9d7ce;
+    }
+
+    .rtable--flip {
+        display: flex;
+        overflow: hidden;
+        background: none;
+    }
+
+    .rtable--flip thead {
+        display: flex;
+        flex-shrink: 0;
+        min-width: min-content;
+    }
+
+    .rtable--flip tbody {
+        display: flex;
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .rtable--flip tr {
+        display: flex;
+        flex-direction: column;
+        min-width: min-content;
+        flex-shrink: 0;
+    }
+
+    .rtable--flip td,
+    .rtable--flip th {
+        display: block;
+    }
+
+    .rtable--flip td {
+        background-image: none !important;
+        /* // border-collapse is no longer active */
+        border-left: 0;
+    }
+
+    /* // border-collapse is no longer active */
+    .rtable--flip th:not(:last-child),
+    .rtable--flip td:not(:last-child) {
+        border-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .rate__Title {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .loadingPoint__Item {
+        width: 45%;
+    }
+
+    .loadingPoint__Title {
+        font-size: 29px;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .loadingPoint__Body {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .loadingPoint__Item {
+        width: 80%;
+        align-items: center;
+    }
+
+    .loadingPoint__Map iframe {
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .loadingPoint__Item {
+        width: 95%;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 915px) {
+    .feedback__title {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .feedback__title {
+        font-size: 25px;
+        text-align: center;
+        line-height: 125%;
+    }
+
+    .feedback {
+        padding: 50px 0;
+    }
+
+    .feedback__Form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        width: 90vw;
+    }
+
+    .feedback__Form button {
+        width: 80%;
+        height: 45px;
+    }
+
+    .footer__Body {
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 15px;
+    }
+
+    .logoFooter {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer__Block {
+        align-items: center;
+    }
+}
+@media screen and (max-width: 1111px) {
+    .header__Grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .City__Title {
+        font-size: 17px;
+    }
 }
