@@ -16,6 +16,26 @@
 
 <body>
     <div class="wrapper">
+        <div class="feedback__alert">
+            <div class="feedback__alertBody">
+                <div class="alert__Icon"><img src="./assets/img/alert_Icon.svg" alt=""></div>
+                <div class="alert__text">Ваше сообщение успешно отправлено, мы ответим вам в ближайшее время)</div>
+            </div>
+        </div>
+        <div class="popap">
+            <div class="popap__Close"></div>
+            <div class="popap__Body">
+                <div class="popap__Title">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
+                <form class="feedback__Form">
+                    <input class="feedback__Form__name" name="name" type="text" placeholder="Имя" required>
+                    <input class="feedback__Form__phone" name="phone" type="text" placeholder="Телефон" required
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'',);">
+                    <input class="feedback__Form__email" name='email' type="text" placeholder="Почта" required>
+                    <button type="submit">ОТПРАВИТЬ</button>
+                </form>
+                <div class="popap__CloseIcon">&#215;</div>
+            </div>
+        </div>
         <nav class="toolbar">
             <div class="container">
                 <div class="toolbar__Body">
@@ -73,7 +93,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="swiper">
+                            <!-- <div class="swiper2">
 
                                 <div class="swiper-wrapper">
 
@@ -170,10 +190,84 @@
                                 </div>
                                 <div class="swiper-button-prev"></div>
                                 <div class="swiper-button-next"></div>
+                            </div> -->
+                            <div class="swiper-slide">
+                                <div class="header__Body">
+                                    <div class="header__Grid">
+
+
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Акмолинская область</div>
+                                            <div class="header__City">Акколь</div>
+                                            <div class="header__City">Атбассар</div>
+                                            <div class="header__City">Кокшетау</div>
+                                            <div class="header__City">Степногорск</div>
+                                        </div>
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Алматинская область</div>
+                                            <div class="header__City">Алматы</div>
+                                            <div class="header__City">Капшагай</div>
+                                            <div class="header__City">Каскелен</div>
+                                            <div class="header__City">Талгар</div>
+                                            <div class="header__City">Талдыкорган</div>
+                                            <div class="header__City">Жаркент</div>
+                                        </div>
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Атырауская область</div>
+                                            <div class="header__City">Атырау</div>
+                                            <div class="header__City">Кулсары</div>
+                                            <div class="header__City">Гурьев</div>
+                                        </div>
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Восточно-Казахстанская область</div>
+                                            <div class="header__City">Аягоз</div>
+                                            <div class="header__City">Зайсан</div>
+                                            <div class="header__City">Серебрянск</div>
+                                            <div class="header__City">Усть-Каменогорск</div>
+                                            <div class="header__City">Зыряновск</div>
+                                            <div class="header__City">Семей</div>
+                                            <div class="header__City">Семипалатинск</div>
+                                            <div class="header__City">Курчатов</div>
+                                        </div>
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Актюбинская область</div>
+                                            <div class="header__City">Актобе</div>
+                                            <div class="header__City">Хромтау</div>
+                                            <div class="header__City">Актюбинкс</div>
+                                            <div class="header__City">Шалкар</div>
+                                        </div>
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Актюбинская область</div>
+                                        </div>
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Западно-Казахстанская область</div>
+                                            <div class="header__City">Аксай</div>
+                                            <div class="header__City">Уральск</div>
+                                        </div>
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Жамбыльская область</div>
+                                            <div class="header__City">Жанатас</div>
+                                            <div class="header__City">Каратау</div>
+                                            <div class="header__City">Тараз</div>
+                                        </div>
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Карагандинская область</div>
+                                            <div class="header__City">Караганда</div>
+                                            <div class="header__City">Жезказган</div>
+                                            <div class="header__City">Сатпаев</div>
+                                        </div>
+                                        <div class="header__Item">
+                                            <div class="header__City City__Title">Костанайская область</div>
+                                            <div class="header__City">Костанай</div>
+                                            <div class="header__City">Рудный</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="header__Body">
                             <div class="header__Grid">
 
@@ -245,7 +339,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
@@ -525,33 +619,35 @@
                 <div class="loadingPoint__Body">
                     <div class="loadingPoint__Item">
                         <div class="loadingPoint__Title">Точка погрузки</div>
+                        <div class="loadingPoint__SubTitle">1. Турксибский р-н , ул. Закарпатская ,162</div>
                         <div class="loadingPoint__Map">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.1780751369292!2d74.61235301545317!3d42.89018950945001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7735bdab3e5%3A0xff6b6986a8abd64c!2sATLAS%20Soft!5e0!3m2!1sru!2skg!4v1670316411519!5m2!1sru!2skg"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2901.5761148316506!2d77.00896351546572!3d43.34405838038376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388372a7fac72ebf%3A0xa0fa7a250ccc8ef4!2z0YPQuy4g0JDRhdC80LXRgtC-0LLQsCAxNjIsINCQ0LvQvNCw0YLRiywg0JrQsNC30LDRhdGB0YLQsNC9!5e0!3m2!1sru!2skg!4v1671175031401!5m2!1sru!2skg"
                                 style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                     <div class="loadingPoint__Item">
                         <div class="loadingPoint__Title">Точка погрузки</div>
+                        <div class="loadingPoint__SubTitle">2. Мкр Самал 2д74/1 маг</div>
                         <div class="loadingPoint__Map">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.1780751369292!2d74.61235301545317!3d42.89018950945001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7735bdab3e5%3A0xff6b6986a8abd64c!2sATLAS%20Soft!5e0!3m2!1sru!2skg!4v1670316411519!5m2!1sru!2skg"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.0081494546534!2d76.95323041546253!3d43.23028878769228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f69394a5df9%3A0x4923e0eba91856cb!2z0LzQuNC60YDQvtGA0LDQudC-0L0g0KHQsNC80LDQuy0yIDIsINCQ0LvQvNCw0YLRiyAwNTAwMDAsINCa0LDQt9Cw0YXRgdGC0LDQvQ!5e0!3m2!1sru!2skg!4v1671175094106!5m2!1sru!2skg"
                                 style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- <div class="aboutUs">
-            <div class="container">
+        <div class="aboutUs">
+            <div class="container container_P">
                 <div class="aboutUs__Block">
                     <div class="aboutUs__Img"><img src="./assets/img/airplane.png" alt=""></div>
+
                     <div class="aboutUs__Item">
+                        <div class="aboutUs__Item__Title">АВИАПЕРЕВОЗКИ</div>
                         <div class="aboutUs__Text">
                             Когда вам необходимо отправить груз в нужное место и нужное время, Asia Freight
                             ДОСТАВЛЯЕТ.Доставляет благодаря транспортно-экспедиторской службе и специализированным
@@ -568,7 +664,40 @@
                         <a href="#" class="aboutUs__Btn">Связаться с нами</a>
                     </div>
                 </div>
+                <button class="accordion">Подробнее</button>
+                <div class="panel">
+                    <div class="panel__Title">Предлагаемые услуги</div>
+                    <ul class="panel__Ul">
+                        <li class="panel__Li">Перевозка груза воздушным путём по городам Казахстана;</li>
+                        <li class="panel__Li">Расчёт оптимальных маршрутов перевозок различными авиакомпаниями;</li>
+                        <li class="panel__Li">Организация чартерных рейсов;</li>
+                        <li class="panel__Li">Доставка грузов от/до двери получателя;</li>
+                    </ul>
+                    <div class="panel__Title">Размеры грузовых люков воздушных судов</div>
+                    <div class="panel__TabsBlock">
+                        <div class="panel__Close">Боинг 737</div>
+                        <div class="panel__Close">Боинг 757</div>
+                        <div class="panel__Close">Аэробус 320</div>
+                        <div class="panel__Close">Мбрайер 190</div>
+                    </div>
+                    <div class="panel__Group">
+                        <div class="panel__GroupItem">
+                            <img src="./assets/img/boeing.png" alt="">
+                            <!-- <div class="panel__GroupItemText">Бизнес джет Boeing 737-300 VIP</div> -->
+                        </div>
+                        <div class="panel__GroupItem">
+                            <img src="./assets/img/boeing2.png" alt="">
+                            <!-- <div class="panel__GroupItemText">Бизнес джет Boeing 737-300 VIP</div> -->
+                        </div>
+                        <div class="panel__GroupItem">
+                            <img src="./assets/img/boeing3.png" alt="">
+                            <!-- <div class="panel__GroupItemText">Бизнес джет Boeing 737-300 VIP</div> -->
+                        </div>
+                    </div>
+                    <div class="panel__Close pClose">Скрыть</div>
+                </div>
                 <div class="aboutUs__Block">
+                    <div class="aboutUs__Img aboutUs__Img2"><img src="./assets/img/train2.png" alt=""></div>
                     <div class="aboutUs__Item aboutUs__Item2">
                         <div class="aboutUs__Item__Title">ЖЕЛЕЗНОДОРОЖНЫЕ ПЕРЕВОЗКИ</div>
                         <div class="aboutUs__Text aboutUs__Text_Right">
@@ -586,7 +715,18 @@
                         </div>
                         <a href="#" class="aboutUs__Btn">Связаться с нами</a>
                     </div>
-                    <div class="aboutUs__Img2"><img src="./assets/img/train2.png" alt=""></div>
+                    <!-- <div class="aboutUs__Img aboutUs__Img2"><img src="./assets/img/train2.png" alt=""></div> -->
+                </div>
+                <button class="accordion accordion2">Подробнее</button>
+                <div class="panel">
+                    <div class="panel__Title">Предлагаемые услуги</div>
+                    <ul class="panel__Ul">
+                        <li class="panel__Li">Перевозка груза воздушным путём по городам Казахстана;</li>
+                        <li class="panel__Li">Расчёт оптимальных маршрутов перевозок различными авиакомпаниями;</li>
+                        <li class="panel__Li">Организация чартерных рейсов;</li>
+                        <li class="panel__Li">Доставка грузов от/до двери получателя;</li>
+                    </ul>
+                    <div class="panel__Close pClose">Скрыть</div>
                 </div>
                 <div class="aboutUs__Block">
                     <div class="aboutUs__Img"><img src="./assets/img/truck.png" alt=""></div>
@@ -608,7 +748,92 @@
                         <a href="#" class="aboutUs__Btn">Связаться с нами</a>
                     </div>
                 </div>
+                <button class="accordion">Подробнее</button>
+                <div class="panel">
+                    <div class="panel__Title">Предлагаемые услуги</div>
+                    <ul class="panel__Ul">
+                        <li class="panel__Li">Перевозка груза воздушным путём по городам Казахстана;</li>
+                        <li class="panel__Li">Расчёт оптимальных маршрутов перевозок различными авиакомпаниями;</li>
+                        <li class="panel__Li">Организация чартерных рейсов;</li>
+                        <li class="panel__Li">Доставка грузов от/до двери получателя;</li>
+                    </ul>
+                    <div class="panel__Group panel__Group2">
+                        <div class="panel__GroupItem">
+                            <div class="panel__Group_Text1">Евро фура <span>Стандартный тентованный полуприцеп с ровным
+                                    полом</span></div>
+                            <img class="panel__GroupImg" src="./assets/img/panel__GroupTrack.png">
+                            <ul class="panel__Ul">
+                                <li class="panel__Li">Длина внутр: 13,6(м)</li>
+                                <li class="panel__Li">Высота внутр: 2,60(м)
+                                </li>
+                                <li class="panel__Li">Ширина внутр: 2,45(м)</li>
+                                <li class="panel__Li">Грузоподъёмность: 20-24</li>
+                            </ul>
+                        </div>
+                        <div class="panel__GroupItem">
+                            <div class="panel__Group_Text1">Мега фура <span>Тентованный полуприцеп с ровным полом и большой высотой</span></div>
+                            <img class="panel__GroupImg" src="./assets/img/panel__GroupTrack2.png">
+                            <ul class="panel__Ul">
+                                <li class="panel__Li">Длина внутр: 13,6(м)</li>
+                                <li class="panel__Li">Высота внутр: 3,0(м)
+                                </li>
+                                <li class="panel__Li">Ширина внутр: 2,45(м)</li>
+                                <li class="panel__Li">Грузоподъёмность: 20-24</li>
+                            </ul>
+                        </div>
+                        <div class="panel__GroupItem">
+                            <div class="panel__Group_Text1 ">Рефрижератор<span class="panel__Group_Text3">Полуприцеп оборудован автономной холодильной установкой , 
+                                позволяющей поддерживать определеную температуру 
+                                внутри от -20C до +12C.</span></div>
+                            <img class="panel__GroupImg" src="./assets/img/panel__GroupTrack3.png">
+                            <ul class="panel__Ul">
+                                <li class="panel__Li">Длина внутр: 13,6(м)</li>
+                                <li class="panel__Li">Высота внутр: 2,60(м)
+                                </li>
+                                <li class="panel__Li">Ширина внутр: 2,45(м)</li>
+                                <li class="panel__Li">Грузоподъёмность: 20-24</li>
+                            </ul>
+                        </div>
+                        <div class="panel__GroupItem">
+                            <div class="panel__Group_Text1">Джамбо фура <span class="panel__Group_Text3">Полуприцеп с «ломаной» рамой , Г-образное основание пола, 
+                                уменьшенный диаметр колёс полуприцепа.</span></div>
+                            <img class="panel__GroupImg" src="./assets/img/panel__GroupTrack4.png">
+                            <ul class="panel__Ul">
+                                <li class="panel__Li">Длина внутр: 13,8(м)</li>
+                                <li class="panel__Li">Высота внутр: 2,45 и 3,0(м)
+                                </li>
+                                <li class="panel__Li">Ширина внутр: 2,45(м)</li>
+                                <li class="panel__Li">Грузоподъёмность: 20-24</li>
+                            </ul>
+                        </div>
+                        <div class="panel__GroupItem">
+                            <div class="panel__Group_Text1">Сцепка MEGA<span>САвтопоезд состоит из сцепки автомобиля и прицепа</span></div>
+                            <img class="panel__GroupImg" src="./assets/img/panel__GroupTrack5.png">
+                            <ul class="panel__Ul">
+                                <li class="panel__Li">Длина внутр.прицепа - 8,0</li>
+                                <li class="panel__Li">Высота внутр.прицепа - 3,0
+                                </li>
+                                <li class="panel__Li">Длина внутр: 8,0(м)</li>
+                                <li class="panel__Li">Высота внутр: 2,95(м)</li>
+                                <li class="panel__Li">Ширина внутр: 2,45(м)</li>
+                                <li class="panel__Li">Грузоподъёмность: 20-25</li>
+                            </ul>
+                        </div>
+                        <div class="panel__GroupItem">
+                            <div class="panel__Group_Text1">Изотермическая фура<span>Стенки полуприцепа состоят из теплоизоляционных материалов</span></div>
+                            <ul class="panel__Ul">
+                                <li class="panel__Li">Длина внутр: 13,6(м)</li>
+                                <li class="panel__Li">Высота внутр: 2,6(м)
+                                </li>
+                                <li class="panel__Li">Ширина внутр: 2,45(м)</li>
+                                <li class="panel__Li">Грузоподъёмность: 20-22</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel__Close pClose">Скрыть</div>
+                </div>
                 <div class="aboutUs__Block">
+                    <div class=" aboutUs__Img aboutUs__Img2"><img src="./assets/img/special_vehicle.png" alt=""></div>
                     <div class="aboutUs__Item aboutUs__Item2">
                         <div class="aboutUs__Item__Title">УПАКВОВКА ГРУЗОВ</div>
                         <div class="aboutUs__Text aboutUs__Text_Right">
@@ -621,19 +846,56 @@
                         </div>
                         <a href="#" class="aboutUs__Btn">Связаться с нами</a>
                     </div>
-                    <div class="aboutUs__Img2"><img src="./assets/img/special_vehicle.png" alt=""></div>
+                </div>
+                <button class="accordion accordion2">Подробнее</button>
+                <div class="panel panelend">
+                    <div class="panel__Title">Мы вам предлагаем следующие виды упаковок:</div>
+                    <ul class="panel__Ul">
+                        <li class="panel__Li">Жёсткая упаковка (Обрешетка) — это обрешетка, состоящая из деревянных
+                            досок. Конструкция используется для доставки нестандартных, хрупких изделий. Вы можете быть
+                            уверены, что ваш груз будет в безопасности, так как жесткая упаковка спасает его от
+                            повреждений.</li>
+                        <li class="panel__Li">Паллетирование — размещение товаров на поддоне с плотным креплением
+                            пленкой или скотчем. Технология используется для сыпучих грузов, при упаковке нескольких
+                            мест, в том числе ценных изделий.</li>
+                        <li class="panel__Li">Пластиковый мешок под пломбировку — применяют для размещения ценных грузов
+                            небольшого размера, мелких партий товаров. Пломба является средством защиты от доступа
+                            третьих лиц.
+                            Пузырчатая пленка — используется для дополнительной защиты товаров от повреждений.</li>
+                        <li class="panel__Li">Паллетный борт — представляет собой закрытый со всех сторон деревянный
+                            короб с регулируемой высотой. Это самый надежный вид упаковки, он обеспечивает максимальную
+                            сохранность груза. Изготовление деревянного ящика с регулировкой по высоте для защиты от
+                            механических повреждений. В него хрупкую технику, в том числе бытовую, светильники,
+                            автомобильные запчасти.</li>
+                        <li class="panel__Li">Коробки — это универсальный вид , который используют при , для доставки
+                            мелких грузов. В коробки помещают разные вещи, чтобы сохранить комплектность при отправке.
+                            Она защитит ваш груз от влажности и повреждений.</li>
+                        <li class="panel__Li">Стретч плёнка — это эластичная пластиковая пленка для упаковки, которая
+                            скрепляет грузы между собой и фиксирует их положение.</li>
+                        <li class="panel__Li">Гофролисты — используются для упаковки грузов на паллетах</li>
+                        <li class="panel__Li">Упаковка скотчем — необходима для фиксации груза в мягкой таре</li>
+                        <li class="panel__Li">Упаковка в полиэтиленовые мешки с пломбами — подходит для нестандартных
+                            грузов, применяется для упаковки небольших штучных грузов</li>
+                    </ul>
+                    <div class="panelEndtext">
+                        Специалисты нашей компании порекомендуют вид упаковки с учетом параметров груза, маршрута
+                        доставки, типа грузоперевозки, используемого транспорта и особых пожеланий заказчика.
+                    </div>
+                    <img src="./assets/img/panelEndImg.png" class="panelEndImg">
+                    <div class="panel__Close pClose">Скрыть</div>
                 </div>
             </div>
-        </div>-->
+        </div>
 
         <div class="feedback">
             <div class="feedback__title">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
-            <div class="feedback__Form">
-                <input type="text" placeholder="Имя">
-                <input type="text" placeholder="Телефон">
-                <input type="text" placeholder="Почта">
+            <form class="feedback__Form">
+                <input class="feedback__Form__name" name="name" type="text" placeholder="Имя" required>
+                <input class="feedback__Form__phone" name="phone" type="text" placeholder="Телефон" required
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'',);">
+                <input class="feedback__Form__email" name='email' type="text" placeholder="Почта" required>
                 <button type="submit">ОТПРАВИТЬ</button>
-            </div>
+            </form>
         </div>
         <footer class="footer">
             <div class="container">
@@ -652,6 +914,8 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/jquery.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
